@@ -9,6 +9,17 @@ public class User extends Entity {
 	private String telefon;
 	private String mail;
 	private Koszyk koszyk;
+	public User() {
+		setId(1);
+		imie = "Damian";
+		nazwisko = "Wic";
+		ulica = "Gdanska";
+		miasto = "Gdansk";
+		nrdomu = "91a";
+		telefon = "788-788-788";
+		mail = "s11819@pjwstk.edu.pl";
+		koszyk = new Koszyk();
+	}
 	public String getImie() {
 		return imie;
 	}
