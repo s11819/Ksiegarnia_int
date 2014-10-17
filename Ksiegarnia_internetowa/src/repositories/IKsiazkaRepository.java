@@ -1,8 +1,11 @@
 package repositories;
 
+import java.util.List;
+
 import domain.*;
 
 public interface IKsiazkaRepository extends IRepository<Ksiazka> {
-	public Ksiazka byAutor (Autor autor);
-	public Ksiazka byAutor (int autorId);
+	public List<Ksiazka> withAutor (Autor autor);
+	public List<Ksiazka> withAutor (int autorId);
+	public Ksiazka withAutor (String tytul);
 }
