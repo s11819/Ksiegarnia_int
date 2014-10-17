@@ -3,7 +3,7 @@ package domain;
 import java.util.ArrayList;
 import java.util.List;
 
-public class Autor {
+public class Autor extends Entity {
 	private String imie;
 	private String nazwisko;
 	private List<Ksiazka> ksiazki;

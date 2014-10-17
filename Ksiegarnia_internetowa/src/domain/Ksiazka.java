@@ -1,11 +1,12 @@
 package domain;
 
-public class Ksiazka {
+public class Ksiazka extends Entity {
 	private String Tytul;
 	private int rok_wydania;
 	private int ISBN;
 	private String autor;
 	private String dostepnosc;
+	private float cena;
 	public String getTytul() {
 		return Tytul;
 	}
@@ -36,5 +37,10 @@ public class Ksiazka {
 	public void setAutor(String autor) {
 		this.autor = autor;
 	}
-	
+	public float getCena(){
+		return cena;
+	}
+	public void setCena(int Cena){
+		cena = Cena;
+	}
 }
