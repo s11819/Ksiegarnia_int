@@ -1,32 +1,31 @@
 package repositories.impl;
 
 import repositories.IRepositoryCatalog;
-import domain.*;
+
 import repositories.IAutorRepository;
 import repositories.IFakturaRepository;
 import repositories.IKoszykRepository;
 import repositories.IKsiazkaRepository;
-import repositories.IRepository;
-import repositories.IRepositoryCatalog;
+
 import repositories.IUserRepository;
 public class DummyRepositoryCatalog implements IRepositoryCatalog {
 	private DummyDb db = new DummyDb();
 	@Override
 	public IKoszykRepository getKoszyk() {
 		// TODO Auto-generated method stub
-		return null;
+		return new DummyKoszykRepository(db);
 	}
 
 	@Override
 	public IFakturaRepository getFaktura() {
 		// TODO Auto-generated method stub
-		return null;
+		return new DummyFakturaRepository(db);
 	}
 
 	@Override
 	public IKsiazkaRepository getKsiazka() {
 		// TODO Auto-generated method stub
-		return null;
+		return new DummyKsiazkaRepository(db);
 	}
 
 	@Override
@@ -38,7 +37,7 @@ public class DummyRepositoryCatalog implements IRepositoryCatalog {
 	@Override
 	public IAutorRepository getAutor() {
 		// TODO Auto-generated method stub
-		return null;
+		return new DummyAutorRepository(db);
 	}
  
 }

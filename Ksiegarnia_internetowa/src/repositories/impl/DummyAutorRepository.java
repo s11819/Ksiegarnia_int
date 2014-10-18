@@ -16,7 +16,7 @@ public class DummyAutorRepository implements IAutorRepository {
 	
 	@Override
 	public void add(Autor entity) {
-		// TODO Auto-generated method stub
+		db.autorzy.add(entity);
 		
 	}
 
@@ -28,7 +28,7 @@ public class DummyAutorRepository implements IAutorRepository {
 
 	@Override
 	public void delete(Autor entity) {
-		// TODO Auto-generated method stub
+		db.autorzy.remove(entity);
 		
 	}
 

@@ -16,7 +16,7 @@ public class DummyKsiazkaRepository implements IKsiazkaRepository {
 	
 	@Override
 	public void add(Ksiazka entity) {
-		// TODO Auto-generated method stub
+		db.ksiazki.add(entity);
 		
 	}
 
@@ -28,7 +28,7 @@ public class DummyKsiazkaRepository implements IKsiazkaRepository {
 
 	@Override
 	public void delete(Ksiazka entity) {
-		// TODO Auto-generated method stub
+		db.ksiazki.remove(entity);
 		
 	}
 

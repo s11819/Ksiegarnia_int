@@ -14,7 +14,7 @@ public class DummyFakturaRepository implements IFakturaRepository {
 	}
 	@Override
 	public void add(Faktura entity) {
-		// TODO Auto-generated method stub
+		db.faktury.add(entity);	
 		
 	}
 
@@ -26,7 +26,7 @@ public class DummyFakturaRepository implements IFakturaRepository {
 
 	@Override
 	public void delete(Faktura entity) {
-		// TODO Auto-generated method stub
+		db.faktury.remove(entity);
 		
 	}
 
