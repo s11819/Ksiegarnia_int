@@ -50,15 +50,19 @@ public class DummyKoszykRepository implements IKoszykRepository {
 	}
 
 	@Override
-	public Koszyk withKsiazka(Ksiazka ksiazka) {
+	public Koszyk withKsiazka(String tytul) {
 		// TODO Auto-generated method stub
-		return null;
+		for(Ksiazka k:db.ksiazki)
+			if(k.getTytul() == tytul)
+				return k.getKsiazki();
+			return new Koszyk();
+			
 	}
 
 	@Override
 	public Koszyk withUser(User kupujacy) {
 		// TODO Auto-generated method stub
-		return null;
+		return withUser(kupujacy.getId());
 	}
 	
 

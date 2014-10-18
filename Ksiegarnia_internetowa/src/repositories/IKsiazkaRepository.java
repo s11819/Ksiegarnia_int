@@ -7,5 +7,5 @@ import domain.*;
 public interface IKsiazkaRepository extends IRepository<Ksiazka> {
 	public List<Ksiazka> withAutor (Autor autor);
 	public List<Ksiazka> withAutor (int autorId);
-	public Ksiazka withAutor (String tytul);
+	public List<Ksiazka> withAutor (String nazwisko);
 }

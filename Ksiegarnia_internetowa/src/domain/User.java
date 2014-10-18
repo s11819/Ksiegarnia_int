@@ -1,5 +1,8 @@
 package domain;
 
+import java.util.ArrayList;
+import java.util.List;
+
 public class User extends Entity {
 	private String imie;
 	private String nazwisko;
@@ -9,6 +12,7 @@ public class User extends Entity {
 	private String telefon;
 	private String mail;
 	private Koszyk koszyk;
+	private List<Faktura> faktura;
 	public User() {
 		setId(1);
 		imie = "Damian";
@@ -19,6 +23,7 @@ public class User extends Entity {
 		telefon = "788-788-788";
 		mail = "s11819@pjwstk.edu.pl";
 		koszyk = new Koszyk();
+		faktura = new ArrayList<Faktura>();
 	}
 	public String getImie() {
 		return imie;
@@ -68,5 +73,10 @@ public class User extends Entity {
 	public void setKoszyk(Koszyk koszyk) {
 		this.koszyk = koszyk;
 	}
-	
+	public List<Faktura> getFaktura(){
+		return faktura;
+	}
+	public void setFaktura(List<Faktura> faktura){
+		this.faktura = faktura;
+	}
 }

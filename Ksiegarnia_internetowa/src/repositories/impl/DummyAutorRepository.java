@@ -1,10 +1,12 @@
 package repositories.impl;
 
+import java.util.ArrayList;
 import java.util.List;
 
 import domain.Autor;
+import domain.Faktura;
 import domain.Ksiazka;
-
+import domain.User;
 import repositories.IAutorRepository;
 
 public class DummyAutorRepository implements IAutorRepository {
@@ -51,7 +53,8 @@ public class DummyAutorRepository implements IAutorRepository {
 	@Override
 	public Autor byKsiazka(Ksiazka ksiazka) {
 		// TODO Auto-generated method stub
-		return null;
+		
+	}
 	}
 
 	@Override

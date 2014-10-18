@@ -1,5 +1,6 @@
 package repositories.impl;
 
+import java.util.ArrayList;
 import java.util.List;
 
 
@@ -54,13 +55,20 @@ public class DummyFakturaRepository implements IFakturaRepository {
 	@Override
 	public List<Faktura> withUser(int userid) {
 		// TODO Auto-generated method stub
-		return null;
+		for(User u:db.users)
+			if(u.getId() == userid)
+				return u.getFaktura();
+			return new ArrayList<Faktura>();
+	
 	}
 
 	@Override
 	public List<Faktura> withUser(String nrFaktury) {
 		// TODO Auto-generated method stub
-		return null;
+		for(User u:db.users)
+			if(u.getFaktura().equals(nrFaktury))
+				return u.getFaktura();
+			return new ArrayList<Faktura>();
 	}
 	
 }

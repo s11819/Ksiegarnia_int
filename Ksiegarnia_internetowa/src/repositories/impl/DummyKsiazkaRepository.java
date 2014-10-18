@@ -1,5 +1,6 @@
 package repositories.impl;
 
+import java.util.ArrayList;
 import java.util.List;
 
 import domain.Autor;
@@ -56,13 +57,20 @@ public class DummyKsiazkaRepository implements IKsiazkaRepository {
 	@Override
 	public List<Ksiazka> withAutor(int autorId) {
 		// TODO Auto-generated method stub
-		return null;
+		for(Autor a:db.autorzy)
+			if(a.getId() == autorId)
+				return a.getKsiazki();
+			return new ArrayList<Ksiazka>();
 	}
 
 	@Override
-	public Ksiazka withAutor(String tytul) {
+	public List<Ksiazka> withAutor(String nazwisko) {
 		// TODO Auto-generated method stub
-		return null;
+		for(Autor a:db.autorzy)
+			if(a.getNazwisko().equals(nazwisko))
+				return a.getKsiazki();
+			return new ArrayList<Ksiazka>();
+			
 	}
 
 }
