@@ -35,6 +35,9 @@ public class DummyKsiazkaRepository implements IKsiazkaRepository {
 	@Override
 	public Ksiazka get(int id) {
 		// TODO Auto-generated method stub
+		for(Ksiazka k:db.ksiazki)
+			if(k.getId()==id)
+				return k;
 		return null;
 	}
 

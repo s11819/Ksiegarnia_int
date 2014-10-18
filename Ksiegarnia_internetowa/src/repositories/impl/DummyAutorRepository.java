@@ -4,6 +4,7 @@ import java.util.List;
 
 import domain.Autor;
 import domain.Ksiazka;
+
 import repositories.IAutorRepository;
 
 public class DummyAutorRepository implements IAutorRepository {
@@ -34,13 +35,16 @@ public class DummyAutorRepository implements IAutorRepository {
 
 	@Override
 	public Autor get(int id) {
-		// TODO Auto-generated method stub
+		for(Autor a:db.autorzy)
+			if(a.getId()==id)
+				return a;
 		return null;
 	}
 
 	@Override
 	public List<Autor> getAll() {
 		// TODO Auto-generated method stub
+		
 		return null;
 	}
 

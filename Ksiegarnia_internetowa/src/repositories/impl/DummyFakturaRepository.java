@@ -2,6 +2,7 @@ package repositories.impl;
 
 import java.util.List;
 
+
 import domain.Faktura;
 import domain.User;
 import repositories.IFakturaRepository;
@@ -32,7 +33,9 @@ public class DummyFakturaRepository implements IFakturaRepository {
 
 	@Override
 	public Faktura get(int id) {
-		// TODO Auto-generated method stub
+		for(Faktura f:db.faktury)
+			if(f.getId()==id)
+				return f;
 		return null;
 	}
 
