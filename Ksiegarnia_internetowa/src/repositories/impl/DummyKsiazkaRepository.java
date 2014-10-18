@@ -8,6 +8,12 @@ import repositories.IKsiazkaRepository;
 
 public class DummyKsiazkaRepository implements IKsiazkaRepository {
 
+	private DummyDb db;
+	public DummyKsiazkaRepository(DummyDb db) {
+		super();
+		this.db = db;
+	}
+	
 	@Override
 	public void add(Ksiazka entity) {
 		// TODO Auto-generated method stub

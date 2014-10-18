@@ -8,6 +8,12 @@ import repositories.IAutorRepository;
 
 public class DummyAutorRepository implements IAutorRepository {
 
+	private DummyDb db;
+	public DummyAutorRepository(DummyDb db) {
+		super();
+		this.db = db;
+	}
+	
 	@Override
 	public void add(Autor entity) {
 		// TODO Auto-generated method stub

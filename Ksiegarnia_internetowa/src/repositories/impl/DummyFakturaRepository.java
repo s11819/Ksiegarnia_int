@@ -7,7 +7,11 @@ import domain.User;
 import repositories.IFakturaRepository;
 
 public class DummyFakturaRepository implements IFakturaRepository {
-
+	private DummyDb db;
+	public DummyFakturaRepository(DummyDb db) {
+		super();
+		this.db = db;
+	}
 	@Override
 	public void add(Faktura entity) {
 		// TODO Auto-generated method stub
