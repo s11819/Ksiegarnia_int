@@ -4,6 +4,12 @@ public class Faktura extends Entity {
 	private String nrFaktury;
 	private User dane;
 	private Koszyk produkty;
+	public Faktura(){
+		setId(1);
+		nrFaktury="FVS-14/10/2054-1";
+		dane = new User();
+		produkty = new Koszyk();
+	}
 	public String getNrFaktury() {
 		return nrFaktury;
 	}

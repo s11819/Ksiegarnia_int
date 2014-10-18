@@ -3,10 +3,19 @@ package domain;
 public class Ksiazka extends Entity {
 	private String Tytul;
 	private int rok_wydania;
-	private int ISBN;
+	private String ISBN;
 	private String autor;
 	private String dostepnosc;
 	private float cena;
+	public Ksiazka (){
+		setId(1);
+		Tytul = "Krew Elfów";
+		rok_wydania = 1994;
+		ISBN = "83-7054-079-1";
+		autor = "Sapkowski";
+		dostepnosc = "Tak";
+		cena = 30;
+	}
 	public String getTytul() {
 		return Tytul;
 	}
@@ -25,10 +34,10 @@ public class Ksiazka extends Entity {
 	public void setRok_wydania(int rok_wydania) {
 		this.rok_wydania = rok_wydania;
 	}
-	public int getISBN() {
+	public String getISBN() {
 		return ISBN;
 	}
-	public void setISBN(int iSBN) {
+	public void setISBN(String iSBN) {
 		ISBN = iSBN;
 	}
 	public String getAutor() {

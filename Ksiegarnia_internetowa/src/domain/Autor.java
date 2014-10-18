@@ -10,6 +10,9 @@ public class Autor extends Entity {
 	
 	public Autor() {
 		super();
+		setId(1);
+		imie = "Andrzej";
+		nazwisko = "Sapkowski";
 		this.ksiazki = new ArrayList<Ksiazka>();
 	}
 

@@ -47,7 +47,7 @@ public class DummyUserRepository implements IUserRepository {
 	}
 
 	@Override
-	public Faktura withFaktura(Faktura faktura) {
+	public List<User> withFaktura(Faktura faktura) {
 		// TODO Auto-generated method stub
 		return withFaktura(faktura.getId());
 	}
@@ -56,7 +56,7 @@ public class DummyUserRepository implements IUserRepository {
 	public List<User> withFaktura(int fakturaId) {
 		for(Faktura f:db.faktury)
 			if(f.getId()==fakturaId)
-				return f.getNrFaktury();
+				return (List<User>) f.getDane();
 			return new ArrayList<User>();
 	}
 

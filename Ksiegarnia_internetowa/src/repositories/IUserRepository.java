@@ -1,8 +1,10 @@
 package repositories;
 
+import java.util.List;
+
 import domain.*;
 
 public interface IUserRepository extends IRepository<User> {
-	public Faktura withFaktura (Faktura faktura);
-	public Faktura withFaktura (int fakturaId);
+	public List<User> withFaktura (Faktura faktura);
+	public List<User> withFaktura (int fakturaId);
 }

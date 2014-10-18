@@ -2,58 +2,64 @@ package repositories.impl;
 
 import java.util.List;
 
-import domain.Autor;
+
+import domain.Koszyk;
 import domain.Ksiazka;
-import repositories.IKsiazkaRepository;
+import domain.User;
+import repositories.IKoszykRepository;
 
-public class DummyKoszykRepository implements IKsiazkaRepository {
+
+public class DummyKoszykRepository implements IKoszykRepository {
+	private DummyDb db;
+	
+	public DummyKoszykRepository(DummyDb db) {
+		super();
+		this.db = db;
+	}
 
 	@Override
-	public void add(Ksiazka entity) {
-		// TODO Auto-generated method stub
+	public void add(Koszyk entity) {
+		db.koszyki.add(entity);
 		
 	}
 
 	@Override
-	public void update(Ksiazka entity) {
-		// TODO Auto-generated method stub
+	public void update(Koszyk entity) {
+		
 		
 	}
 
 	@Override
-	public void delete(Ksiazka entity) {
-		// TODO Auto-generated method stub
+	public void delete(Koszyk entity) {
+		db.koszyki.remove(entity);
 		
 	}
 
 	@Override
-	public Ksiazka get(int id) {
+	public Koszyk get(int id) {
+		for(Koszyk k:db.koszyki)
+			if(k.getId()==id)
+				return k;
+		return null;
+	}
+
+	@Override
+	public List<Koszyk> getAll() {
+		// TODO Auto-generated method stub
+		return db.koszyki;
+	}
+
+	@Override
+	public Koszyk withKsiazka(Ksiazka ksiazka) {
 		// TODO Auto-generated method stub
 		return null;
 	}
 
 	@Override
-	public List<Ksiazka> getAll() {
+	public Koszyk withUser(User kupujacy) {
 		// TODO Auto-generated method stub
 		return null;
 	}
-
-	@Override
-	public List<Ksiazka> withAutor(Autor autor) {
-		// TODO Auto-generated method stub
-		return null;
-	}
-
-	@Override
-	public List<Ksiazka> withAutor(int autorId) {
-		// TODO Auto-generated method stub
-		return null;
-	}
-
-	@Override
-	public Ksiazka withAutor(String tytul) {
-		// TODO Auto-generated method stub
-		return null;
-	}
+	
 
 }

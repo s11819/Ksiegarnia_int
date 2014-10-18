@@ -7,6 +7,8 @@ public class Koszyk extends Entity {
 	private List<Ksiazka> ksiazki;
 	private float kosztCalkowity;
 	public Koszyk (){
+		setId(1);
+		kosztCalkowity = 256;
 		this.ksiazki = new ArrayList<Ksiazka>();
 	}
 	public List<Ksiazka> getKsiazki() {
