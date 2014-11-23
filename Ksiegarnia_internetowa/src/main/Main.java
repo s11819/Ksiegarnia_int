@@ -11,7 +11,7 @@ import domain.*;
 public class Main {
 
 	public static void main(String[] args) {
-		IRepositoryCatalog catalog = new DummyRepositoryCatalog();
+		//IRepositoryCatalog catalog = new DummyRepositoryCatalog();
 		String user = "root";
 		String password = "";
 		String url = "jdbc:mysql://localhost/";
@@ -27,17 +27,9 @@ public class Main {
 			Class.forName("com.mysql.jdbc.Driver").newInstance();
 			Connection connection = DriverManager.getConnection(url,user,password);
 			Statement stt = connection.createStatement();
-			stt.execute("CREATE DATABASE IF NOT EXISTS testpol");
+			CreateDB stworzbaze = new CreateDB(url, password, user);
+			stworzbaze.CreateDBs();
 			stt.execute("USE testpol");
-			stt.execute("DROP TABLE IF EXISTS autor");
-			String createTable =
-					"CREATE TABLE autor("
-					+ "id BIGINT NOT NULL AUTO_INCREMENT,"
-					+ "imie VARCHAR(20),"
-					+ "nazwisko VARCHAR(40),"
-					+ "PRIMARY KEY(id)"
-                    + ")";
-					stt.executeUpdate(createTable);
 			IRepository<Autor> autors = new AutorRepository(connection);
 			autors.add(asapkowski);
 		}catch (Exception e) {
