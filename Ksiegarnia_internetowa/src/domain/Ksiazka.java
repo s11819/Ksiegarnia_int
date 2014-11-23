@@ -6,7 +6,7 @@ public class Ksiazka extends Entity {
 	private String ISBN;
 	private String autor;
 	private String dostepnosc;
-	private float cena;
+	private double cena;
 	public Ksiazka (){
 		setId(1);
 		Tytul = "Krew Elfów";
@@ -46,10 +46,10 @@ public class Ksiazka extends Entity {
 	public void setAutor(String autor) {
 		this.autor = autor;
 	}
-	public float getCena(){
+	public double getCena(){
 		return cena;
 	}
-	public void setCena(int Cena){
+	public void setCena(double Cena){
 		cena = Cena;
 	}
 }

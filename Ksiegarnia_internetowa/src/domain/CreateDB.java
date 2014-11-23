@@ -70,7 +70,7 @@ public class CreateDB {
 			+ "rokwydania INT,"
 			+ "isbn VARCHAR(30),"
 			+ "dostepnasc ENUM(\"tak\",\"nie\"),"
-			+ "cena DOUBLE(3,2),"
+			+ "cena DOUBLE(5,2),"
 			+ "PRIMARY KEY(id)"
 			+ ")";
 			stt.executeUpdate(createTable);
